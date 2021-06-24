@@ -14,7 +14,7 @@ class _AccueilViewState extends State<AccueilView>
 
   @override
   void initState() {
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
     super.initState();
   }
 
@@ -32,7 +32,8 @@ class _AccueilViewState extends State<AccueilView>
               controller: _tabController,
               tabs: <Widget>[
                 Tab(text: 'Pokémon'),
-                Tab(text: 'Habilités'),
+                Tab(text: 'Recherche'),
+                Tab(text: 'Favoris'),
               ],
             ),
             Expanded(
@@ -41,7 +42,8 @@ class _AccueilViewState extends State<AccueilView>
                 physics: NeverScrollableScrollPhysics(),
                 children: <Widget>[
                   TabPokemon(),
-                  Text("data2"),
+                  Text("Recherche"),
+                  Text("Favoris"),
                 ],
               ),
             )

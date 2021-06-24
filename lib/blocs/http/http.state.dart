@@ -2,7 +2,7 @@ abstract class HttpState {}
 
 class HttpEmptyState extends HttpState {}
 
-class Pokemons extends HttpState {
+class GetPokemonsState extends HttpState {
   final dynamic pokemons;
-  Pokemons({required this.pokemons});
+  GetPokemonsState({required this.pokemons});
 }

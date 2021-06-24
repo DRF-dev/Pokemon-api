@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokemon/blocs/http/http.bloc.dart';
 import 'package:pokemon/views/accueil/accueil.view.dart';
-import 'package:pokemon/views/details/details.view.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           AccueilView.route: (context) => AccueilView(),
-          Details.route: (context) => Details(),
+          '/s': (context) => Text(""),
         },
       ),
     );
