@@ -15,6 +15,12 @@ class FavBloc extends Bloc<FavEvents, FavState> {
     if (event is RemoveFavoriteEvent) {
       favRepository.removeFavorite(event.singlePokemon);
     }
-    yield FavStateWithValue(pokemons: favRepository.pokemons);
+    if (event is SearchPokemonByIdEvent) {
+      favRepository.getPokemonByPokedexID(event.pokedexId);
+    }
+    yield FavStateWithValue(
+      pokemons: favRepository.pokemons,
+      pokemonModel: favRepository.pokemonModel,
+    );
   }
 }

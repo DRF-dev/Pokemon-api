@@ -11,13 +11,27 @@ class Favorite extends StatelessWidget {
     return BlocBuilder<FavBloc, FavState>(
       builder: (context, state) {
         if (state is FavStateWithValue) {
+          if (state.pokemons.length == 0) {
+            return Center(
+              child: Text("No pokemons present in your favorite"),
+            );
+          }
+
           return ListView.builder(
             itemCount: state.pokemons.length,
-            itemBuilder: (context, index) => state.pokemons[index],
+            itemBuilder: (context, index) => Container(
+              margin: EdgeInsets.symmetric(horizontal: 50, vertical: 25),
+              decoration: BoxDecoration(
+                color: Colors.grey.withOpacity(.1),
+                borderRadius: BorderRadius.circular(60),
+              ),
+              height: MediaQuery.of(context).size.height / 1.6,
+              child: state.pokemons[index],
+            ),
           );
         }
         return Center(
-          child: Text("No pokemons"),
+          child: Text("No pokemons present in your favorite"),
         );
       },
     );

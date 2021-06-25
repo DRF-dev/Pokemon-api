@@ -12,3 +12,8 @@ class RemoveFavoriteEvent extends FavEvents {
   PokemonModel singlePokemon;
   RemoveFavoriteEvent({required this.singlePokemon});
 }
+
+class SearchPokemonByIdEvent extends FavEvents {
+  int pokedexId;
+  SearchPokemonByIdEvent({required this.pokedexId});
+}
