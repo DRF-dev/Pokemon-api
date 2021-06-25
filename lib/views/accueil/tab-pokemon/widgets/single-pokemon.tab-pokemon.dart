@@ -79,8 +79,6 @@ class SinglePokemon extends StatelessWidget {
               List isFavorite = state.pokemons
                   .where((e) => e.pokemonModel == pokemonModel)
                   .toList();
-              print(isFavorite.length);
-              print(isFavorite.length != 0);
               if (isFavorite.length != 0) {
                 return IconButton(
                   icon: Icon(Icons.favorite),
