@@ -1,8 +1,8 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pokemon/blocs/http/http.bloc.dart';
 import 'package:pokemon/views/accueil/accueil.view.dart';
+import 'blocs/fav/fav.bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HttpBloc(),
+      create: (context) => FavBloc(),
       child: MaterialApp(
         title: 'Pokemon API',
         theme: ThemeData(

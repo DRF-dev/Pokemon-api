@@ -26,6 +26,7 @@ class TypeTabPokemon extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: types
             .map(
               (e) => Container(

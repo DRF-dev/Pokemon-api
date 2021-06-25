@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon/views/accueil/favorites/favorite.widget.dart';
 import 'package:pokemon/views/accueil/tab-pokemon/tab-pokemon.widget.dart';
 
 class AccueilView extends StatefulWidget {
@@ -43,7 +44,7 @@ class _AccueilViewState extends State<AccueilView>
                 children: <Widget>[
                   TabPokemon(),
                   Text("Recherche"),
-                  Text("Favoris"),
+                  Favorite(),
                 ],
               ),
             )
