@@ -10,6 +10,8 @@ class FavRepository {
   List<SinglePokemon> pokemons = [];
   PokemonModel? pokemonModel;
 
+  FavRepository();
+
   addFavorite(SinglePokemon singlePokemon) {
     pokemons.add(singlePokemon);
   }
